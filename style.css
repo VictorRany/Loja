@@ -1,0 +1,222 @@
+:root {
+  --yellow: #ffc001;
+  --black: #222;
+  --white: #fff;
+  --spacing: 16px;
+  --roboto:'Roboto Mono', monospace;
+  --handwriting: 'Gloria Hallelujah', cursive;
+}
+*{
+  margin: 0;
+padding: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  color: black;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  font-family: 'Gloria Hallelujah';
+}
+.navigation-container {
+  font-family: var(--roboto);
+  font-weight: 700;
+}
+.shipping-info-top {
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 0.5em;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+}
+.left-nav, .right-nav {
+  display: flex;
+}
+li {
+  padding-left: 12px;
+  padding-right: 26px;
+}
+.red-wr {
+  color: red;
+}
+.logo {
+  width: 150px;
+  height: 27px;
+}
+.menu-btn {
+  display: none;
+}
+.banner-custom img {
+  width: 100%;
+}
+.is-closed {
+  display: none;
+}
+.community-welcome h1 {
+  font-size: 5em;
+  color: var(--black);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 1.2;
+}
+.community-content {
+  font-family: 'Roboto Mono';
+  padding: 2em 2em 0 4em;
+}
+.community-content p {
+  font-weight: 300;
+  color: var(--black);
+  line-height: 60px;
+}
+.community-content button {
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-weight: bolder;
+  height: 70px;
+  width: 140px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--yellow);
+  border: 2px solid black;
+}
+.hidden {
+  display: none;
+}
+.products-container{
+  font-family: var(--roboto);
+  font-weight: 500;
+  padding: 37px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-evenly;
+  padding-bottom: 8em;
+}
+.card img {
+  cursor: pointer;
+  width: 420px;
+}
+.card {
+  -webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+.card:hover {
+  border: 2px solid var(--yellow);
+  -webkit-transform: scale(0.9);
+transform: scale(0.9);
+}
+.card p{
+  text-align: end;
+}
+.sold-out::before {
+  content: 'sold out';
+  display: flex;
+  justify-content: center;
+  font-family: var(--handwriting);
+  background-color: var(--black);
+  color: var(--white);
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+.shop-all-container, .video-archives-container, .scrapbooks-container {
+  display: flex;
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.3;
+  align-items: center;
+  padding-bottom: 7em;
+}
+.shop-all-container img, .scrapbooks-container img {
+  width: 90%;
+}
+.video-archives-container img {
+  width: 100%;
+}
+.links-container-vertical p {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  padding: 0 3rem;
+}
+footer {
+  font-family: var(--roboto);
+  display: flex;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 37px;
+  background-color: var(--yellow);
+  justify-content: center;
+}
+@media screen and (max-width: 999px) {
+  .links-container-vertical {
+      overflow-x: hidden;
+  }
+  nav {
+      justify-content: space-evenly;
+  }
+  .left-nav, .right-nav {
+      display: none;
+  }
+  .menu-btn {
+      display: block;
+  }
+  .bag-btn {
+      display: block;
+  }
+  .mobile-list {
+      position: fixed;
+      line-height: 2em;
+      font-size: 1.2em;
+      inset: 0 50% 0% 0;
+      background-color: #ffc001;
+      filter: drop-shadow(5px 1px 11px rgba(0, 0, 0, 0.144));
+      overflow-x: hidden;
+      overflow-y: scroll;
+      z-index: 999;
+  }
+  .close-icon {
+      padding: 5%;
+  }
+  .dark-bg {
+      background-color: rgba(0, 0, 0, 0.192);
+  }
+  .card img {
+      width: 300px;
+  }
+  .video-archives-container img {
+      width: 95%;
+  }
+  .links-container-vertical p {
+      font-size: 20px;
+      padding: 0 0.4em;
+  }
+  footer {
+      flex-direction: column;
+      padding-left: 37px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobile-list {
+      inset: 0 ;
+      font-size: 2em;
+  }
+  .community-welcome h1 {
+      font-size: 3em;
+      padding-top: 1em;
+  }
+  .links-container-vertical p {
+      font-size: 14px;
+      padding: 0 0.4em;
+  }
+}
